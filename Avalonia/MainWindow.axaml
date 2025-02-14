@@ -1,0 +1,116 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaExample.MainWindow"
+        Width="800" Height="600" Title="VirtualZOO">
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="BorderBrush" Value="Brown"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+        <Style Selector="TextBlock">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="ZIndex" Value="0"/>
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="MaxLength" Value="20" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Padding" Value="5" />
+            
+        </Style>
+    </Window.Styles>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="InputTextBox" Width="300" Margin="10" HorizontalAlignment="Center"/>
+
+        <Button x:Name="FirstButton" FontSize="50" Content="MyVirtualZOO" Width="500" Margin="30" Click="OnFirstButtonClick" HorizontalAlignment="Center" Grid.Row="0"/>
+        <Button x:Name="SecondButton" Content="Start" FontSize="30" Width="200" Margin="20" Click="OnSecondButtonClick" HorizontalAlignment="Center" Grid.Row="1"/> 
+        <Button x:Name="OurAnimal" Content="Our Animals" FontSize="30" Width="200" Margin="20" Click="Showall" HorizontalAlignment="Center" Grid.Row="2"/>
+        <Button x:Name="Aboutproject" Content="Project info" FontSize="30" Width="200" Margin="20" Click="FormAboutProject" HorizontalAlignment="Center" Grid.Row="3"/>
+        <Button x:Name="Exit" Content="Exit" Width="100" FontSize="15" Margin="20" HorizontalAlignment="Right" Click="Exitbotton" Grid.Row="8"/>
+        
+        <!-- Добавьте Grid.Row для кнопки lab -->
+        <Button x:Name="lab" Content="Programm in C++" Width="200" FontSize="20" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="OnCppButtonClick" Grid.Row="13"/>
+        <Button x:Name="back" Content="Back" Width="100" FontSize="15" Margin="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="OnBackButtonClick" Grid.Row="13"/>
+        <Button x:Name="Back" Content="Back" Width="100" FontSize="15" Margin="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="OnBackButtonClick" Grid.Row="17"/>
+        <TextBlock x:Name="OutputTextBlock" Margin="8" FontSize="22" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBlock x:Name="OutputTextBlock1" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="1"/>
+        <TextBlock x:Name="OutputTextBlock2" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="2"/>
+        <TextBlock x:Name="OutputTextBlock21" Margin="2" FontSize="15" HorizontalAlignment="Center" Grid.Row="3"/>
+        <TextBlock x:Name="OutputTextBlock3" Margin="8" FontSize="22" HorizontalAlignment="Left" Grid.Row="2"/>
+        <TextBlock x:Name="OutputTextBlock4" Margin="5" FontSize="17" HorizontalAlignment="Left" Grid.Row="3"/>
+        <TextBlock x:Name="OutputTextBlock5" Margin="5" FontSize="17" HorizontalAlignment="Left" Grid.Row="4"/>
+        <TextBlock x:Name="OutputTextBlock6" Margin="5" FontSize="17" HorizontalAlignment="Left" Grid.Row="5"/>
+        <TextBlock x:Name="OutputTextBlock7" Margin="5" FontSize="17" HorizontalAlignment="Left" Grid.Row="6"/>
+        <TextBlock x:Name="OutputTextBlock22" Margin="2" FontSize="15" HorizontalAlignment="Left" Grid.Row="7"/>
+        <TextBlock x:Name="OutputTextBlock8" Margin="8" FontSize="22" HorizontalAlignment="Right" Grid.Row="2"/>
+        <TextBlock x:Name="OutputTextBlock9" Margin="5" FontSize="17" HorizontalAlignment="Right" Grid.Row="3"/>
+        <TextBlock x:Name="OutputTextBlock10" Margin="5" FontSize="17" HorizontalAlignment="Right" Grid.Row="4"/>
+        <TextBlock x:Name="OutputTextBlock11" Margin="5" FontSize="17" HorizontalAlignment="Right" Grid.Row="5"/>
+        <TextBlock x:Name="OutputTextBlock12" Margin="5" FontSize="17" HorizontalAlignment="Right" Grid.Row="6"/>
+        <TextBlock x:Name="OutputTextBlock23" Margin="2" FontSize="15" HorizontalAlignment="Right" Grid.Row="7"/>
+        <TextBlock x:Name="OutputTextBlock13" Margin="8" FontSize="22" HorizontalAlignment="Center" Grid.Row="6"/>
+        <TextBlock x:Name="OutputTextBlock14" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="7"/>
+        <TextBlock x:Name="OutputTextBlock15" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="8"/>
+        <TextBlock x:Name="OutputTextBlock16" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="9"/>
+        <TextBlock x:Name="OutputTextBlock17" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="10"/>
+        <TextBlock x:Name="OutputTextBlock18" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="11"/>
+        <TextBlock x:Name="OutputTextBlock19" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="12"/>
+        <TextBlock x:Name="OutputTextBlock20" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="13"/>
+        <TextBlock x:Name="OutputTextBlock24" Margin="2" FontSize="15" HorizontalAlignment="Center" Grid.Row="15"/>
+        <TextBlock x:Name="OutputTextBlock25" Margin="5" FontSize="17" HorizontalAlignment="Center" Grid.Row="14"/>
+        <Button x:Name="liver1" Content="Animal" FontSize="25" Width="200" Margin="20" Click="Animal" HorizontalAlignment="Center" Grid.Row="2"/> 
+        <Button x:Name="liver2" Content="MyHomeAnimal" FontSize="25" Width="200" Margin="20" Click="HomeAnimal" HorizontalAlignment="Center" Grid.Row="4"/>
+        <Button x:Name="liver3" Content="MyWildAnimal" FontSize="25" Width="200" Margin="20" Click="WildAnimal" HorizontalAlignment="Center" Grid.Row="6"/>
+        <Button x:Name="liver4" Content="Monkey" FontSize="25" Width="200" Margin="20" Click="Monkey" HorizontalAlignment="Center" Grid.Row="8"/>
+        <TextBlock x:Name="OutputTextBlock26" Width="400" Margin="8" FontSize="50" HorizontalAlignment="Center" Grid.Row="1"/>
+        <TextBlock x:Name="OutputTextBlock27" Margin="8" FontSize="50" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBlock x:Name="OutputTextBlock28" Margin="8" FontSize="50" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBlock x:Name="OutputTextBlock29" Margin="8" FontSize="50" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBlock x:Name="OutputTextBlock30" Margin="8" FontSize="50" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBox x:Name="name" Width="200" Margin="12" Watermark="Enter name..." Grid.Row="1" />
+        <TextBox x:Name="age" Width="200" Margin="12" Watermark="Enter age..." Grid.Row="2"/>
+        <TextBox x:Name="friend" Width="200" Margin="12" Watermark="Enter friend..." Grid.Row="3" />
+        <TextBox x:Name="height" Width="200" Margin="12" Watermark="Enter height..." Grid.Row="4"/>
+        <TextBox x:Name="fur" Width="200" Margin="12" Watermark="Enter fur..." Grid.Row="5" />
+        <TextBox x:Name="average" Width="200" Margin="12" Watermark="Enter average..." Grid.Row="6"/>
+        <TextBox x:Name="meal" Width="200" Margin="12" Watermark="Enter meal..." Grid.Row="7" />
+        <TextBox x:Name="kilo" Width="200" Margin="12" Watermark="Enter kilo..." Grid.Row="8"/>
+        
+        <Button x:Name="asave" Content="Save" FontSize="15" Width="200" Margin="20" Click="OnASaveBottom" HorizontalAlignment="Right" Grid.Row="17" VerticalAlignment="Bottom"/> 
+        <Button x:Name="asave1" Content="Save" FontSize="15" Width="200" Margin="20" Click="OnASaveBottom1" HorizontalAlignment="Right" Grid.Row="17" VerticalAlignment="Bottom"/> 
+        <Button x:Name="asave2" Content="Save" FontSize="15" Width="200" Margin="20" Click="OnASaveBottom2" HorizontalAlignment="Right" Grid.Row="17" VerticalAlignment="Bottom"/> 
+        <Button x:Name="asave3" Content="Save" FontSize="15" Width="200" Margin="20" Click="OnASaveBottom3" HorizontalAlignment="Right" Grid.Row="17" VerticalAlignment="Bottom"/> 
+        
+    </Grid>
+</Window>
